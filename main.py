@@ -5,8 +5,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.options import Options
 from datetime import datetime
 
-
-
+# testando o git
 class Bot:
     def __init__(self, url):
         options = Options()

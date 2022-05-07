@@ -13512,3 +13512,326 @@ DevTools listening on ws://localhost:32903/devtools/browser/329b0468-a4d7-410c-b
 [2022-05-07T21:09:12Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
 [2022-05-07T21:09:12Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
 JavaScript warning: https://pagead2.googlesyndication.com/bg/L40_bwVzlW8spCJYIlxRfazkqz_naZf8jNC5QLvZgqM.js line 1 > eval line 5287 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1651957846884	Marionette	INFO	Stopped listening on port 46109
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1651957847575	geckodriver	INFO	Listening on 127.0.0.1:51101
+1651957848082	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "55709" "-no-remote" "-profile" "/tmp/rust_mozprofileE4gsZY"
+*** You are running in headless mode.
+1651957848748	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileE4gsZY/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55709/devtools/browser/cc99608c-ed8c-4ef0-b317-d91448234758
+1651957850505	Marionette	INFO	Listening on port 43173
+1651957850615	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[2022-05-07T21:10:54Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:10:54Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:10:54Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:10:54Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+1651957858099	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1651957955405	Marionette	INFO	Stopped listening on port 43173
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+1651957956253	geckodriver	INFO	Listening on 127.0.0.1:43541
+1651957956767	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "38243" "-no-remote" "-profile" "/tmp/rust_mozprofilemOInsj"
+*** You are running in headless mode.
+1651957957441	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilemOInsj/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:38243/devtools/browser/cdca0359-00b4-449b-ae22-5e58b3118341
+1651957959420	Marionette	INFO	Listening on port 43475
+1651957959494	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[2022-05-07T21:12:43Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:12:43Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:12:43Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:12:43Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+1651957963496	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1651958023597	Marionette	INFO	Stopped listening on port 43475
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+1651958024250	geckodriver	INFO	Listening on 127.0.0.1:32961
+1651958024760	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "33121" "-no-remote" "-profile" "/tmp/rust_mozprofilenloips"
+*** You are running in headless mode.
+1651958025429	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilenloips/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:33121/devtools/browser/70e43868-7f67-4c48-a3b1-1eb71a6fae28
+1651958026939	Marionette	INFO	Listening on port 33927
+1651958027037	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651958029810	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+[2022-05-07T21:13:50Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:13:50Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:13:50Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:13:50Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+1651958126048	Marionette	INFO	Stopped listening on port 33927
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1651958126651	geckodriver	INFO	Listening on 127.0.0.1:34625
+1651958127163	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "41669" "-no-remote" "-profile" "/tmp/rust_mozprofileisVIqd"
+*** You are running in headless mode.
+1651958127687	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileisVIqd/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:41669/devtools/browser/33c61126-4351-4d29-b042-55e0fce0f1df
+1651958128959	Marionette	INFO	Listening on port 43947
+1651958128984	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[2022-05-07T21:15:31Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:15:31Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:15:31Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:15:31Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+1651958131964	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/L40_bwVzlW8spCJYIlxRfazkqz_naZf8jNC5QLvZgqM.js line 1 > eval line 4773 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1651958301960	Marionette	INFO	Stopped listening on port 43947
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+1651958302475	geckodriver	INFO	Listening on 127.0.0.1:36101
+1651958302988	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "47361" "-no-remote" "-profile" "/tmp/rust_mozprofileDv3DAw"
+*** You are running in headless mode.
+1651958303663	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileDv3DAw/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:47361/devtools/browser/1ec23407-a94c-45cb-8415-fb3a6c604128
+1651958305235	Marionette	INFO	Listening on port 43775
+1651958305313	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[2022-05-07T21:18:28Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:18:28Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+1651958308408	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+[2022-05-07T21:18:28Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:18:28Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+1651958404894	Marionette	INFO	Stopped listening on port 43775
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+1651958405658	geckodriver	INFO	Listening on 127.0.0.1:36317
+1651958406161	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "50033" "-no-remote" "-profile" "/tmp/rust_mozprofilealiBGU"
+*** You are running in headless mode.
+1651958406808	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilealiBGU/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50033/devtools/browser/9b69c1b6-ca48-4763-be4b-b5233c1f49f5
+1651958409043	Marionette	INFO	Listening on port 40317
+1651958409100	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651958412325	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+[2022-05-07T21:20:12Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:20:12Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:20:12Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:20:12Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+1651958472308	Marionette	INFO	Stopped listening on port 40317
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+1651958473003	geckodriver	INFO	Listening on 127.0.0.1:60637
+1651958473510	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "38219" "-no-remote" "-profile" "/tmp/rust_mozprofilebRWw55"
+*** You are running in headless mode.
+1651958474146	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilebRWw55/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:38219/devtools/browser/594b0641-af55-467b-b80d-b5d1d3234804
+1651958476220	Marionette	INFO	Listening on port 33833
+1651958476242	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[2022-05-07T21:21:21Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:21:21Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+1651958481109	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+[2022-05-07T21:21:21Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:21:21Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+1651958577620	Marionette	INFO	Stopped listening on port 33833
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+1651958578342	geckodriver	INFO	Listening on 127.0.0.1:47497
+1651958578853	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "36013" "-no-remote" "-profile" "/tmp/rust_mozprofileswRD2O"
+*** You are running in headless mode.
+1651958579504	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileswRD2O/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:36013/devtools/browser/c4ef70a6-c8a4-41a2-8d44-65ab5cefd17c
+1651958580881	Marionette	INFO	Listening on port 44059
+1651958581042	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651958583445	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+[2022-05-07T21:23:03Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:23:03Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:23:03Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:23:03Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+1651958640527	Marionette	INFO	Stopped listening on port 44059
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+1651958641237	geckodriver	INFO	Listening on 127.0.0.1:56077
+1651958641745	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "42021" "-no-remote" "-profile" "/tmp/rust_mozprofile2QzwGF"
+*** You are running in headless mode.
+1651958642452	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile2QzwGF/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:42021/devtools/browser/415a612d-ad42-4569-b50e-f551eccee07f
+1651958644181	Marionette	INFO	Listening on port 46727
+1651958644270	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[2022-05-07T21:24:07Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:24:07Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:24:07Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+1651958647573	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+[2022-05-07T21:24:07Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+1651958743724	Marionette	INFO	Stopped listening on port 46727
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+1651958744316	geckodriver	INFO	Listening on 127.0.0.1:49849
+1651958744826	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "39175" "-no-remote" "-profile" "/tmp/rust_mozprofileeRgoTO"
+*** You are running in headless mode.
+1651958745360	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileeRgoTO/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:39175/devtools/browser/b30ab428-7211-46f7-930a-49051f58d251
+1651958746690	Marionette	INFO	Listening on port 41435
+1651958746787	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651958749478	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+[2022-05-07T21:25:49Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:25:49Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:25:49Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+[2022-05-07T21:25:49Z ERROR mp4parse] Found 2 nul bytes in "\u{0}\u{0}"
+1651958808953	Marionette	INFO	Stopped listening on port 41435
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
