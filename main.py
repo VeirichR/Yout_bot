@@ -70,15 +70,32 @@ class Bot:
             print(f'{"-"*50}\nFail to close the browser!\n\n{error}\n{"-"*50}')
 
 
-url = ['https://www.youtube.com/watch?v=ELUyXkFAshw&ab_channel=Tips%26Reviews',
-       'https://www.youtube.com/watch?v=yYpVPFU2j7c&ab_channel=Tips%26Reviews',
-       'https://www.youtube.com/watch?v=6m7cAQgxtJA&ab_channel=Tips%26Reviews',
-       'https://www.youtube.com/watch?v=rIlHQ7iCZJs&ab_channel=Tips%26Reviews'
-       ]
+'''['https://www.youtube.com/watch?v=ELUyXkFAshw&ab_channel=Tips%26Reviews',
+'https://www.youtube.com/watch?v=yYpVPFU2j7c&ab_channel=Tips%26Reviews',
+'https://www.youtube.com/watch?v=6m7cAQgxtJA&ab_channel=Tips%26Reviews',
+'https://www.youtube.com/watch?v=rIlHQ7iCZJs&ab_channel=Tips%26Reviews']
 
-for i in range(10):
+['https://www.youtube.com/watch?v=9ywHBxX2KA0&ab_channel=Tips%26Reviews',
+'https://www.youtube.com/watch?v=kGkq58BWhFs&ab_channel=Tips%26Reviews',
+'https://www.youtube.com/watch?v=yTtJhXLTGMw&ab_channel=Tips%26Reviews',
+'https://www.youtube.com/watch?v=WXthUZGSRyM&ab_channel=Tips%26Reviews']
+
+['https://www.youtube.com/watch?v=obXGuYkAjNc&ab_channel=Dicas%26Reviews%C2%AE',
+'https://www.youtube.com/watch?v=WKnzzRNe9Jg&ab_channel=Dicas%26Reviews%C2%AE',
+'https://www.youtube.com/watch?v=khsZkciyghg&ab_channel=Dicas%26Reviews%C2%AE',]
+
+['https://www.youtube.com/watch?v=8TOFWnJEDkI&ab_channel=Tips%26Reviews',
+'https://www.youtube.com/watch?v=3_OVKnw60U0&ab_channel=Tips%26Reviews',
+'https://www.youtube.com/watch?v=pFumZOMmWas&ab_channel=Tips%26Reviews',
+'https://www.youtube.com/watch?v=245ONuV9KDw&ab_channel=Tips%26Reviews']'''
+
+with open('links.txt', 'r', encoding="utf8") as arquivo:
+    url = [linha.strip() for linha in arquivo]
+
+views = 30
+for view in range(views):
     for video in url:
-        yout_bot = Bot(video)
+        yout_bot = Bot(video)  # pensar uma forma de nao inicializar toda vez
         yout_bot.open_url()
         total_dur = yout_bot.get_video_duration()
         yout_bot.speed_up()
@@ -86,12 +103,19 @@ for i in range(10):
         test = yout_bot.get_time_watched()
         if test == '0:00':
             yout_bot.play_video()
-            print('Foi no teste')
-        watched = 0
+            print('Forced played!')
         print(f'Watching! {datetime.now():%d-%m-%y %H:%M:%S}')
-        while total_dur != watched:
-            sleep(1)
-            watched = yout_bot.get_time_watched()
+        time_before = datetime.now()
 
-        print(f'View {i+1} completa!')
+        watched = 0
+        while total_dur != watched:
+            if watched == 0:
+                sleep(1)
+            watched = yout_bot.get_time_watched()
+            time_after = datetime.now() - time_before
+            if time_after.seconds >= 480:
+                print('Bug or ad too long, starting next video!')
+                break
+
+        print(f'View {views+1} completa!')
         yout_bot.close_browser()
