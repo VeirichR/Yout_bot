@@ -5,8 +5,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.options import Options
 from datetime import datetime
 
-# testando o github
-
 
 class Bot:
     def __init__(self, url):
@@ -70,25 +68,6 @@ class Bot:
             print(f'{"-"*50}\nFail to close the browser!\n\n{error}\n{"-"*50}')
 
 
-'''['https://www.youtube.com/watch?v=ELUyXkFAshw&ab_channel=Tips%26Reviews',
-'https://www.youtube.com/watch?v=yYpVPFU2j7c&ab_channel=Tips%26Reviews',
-'https://www.youtube.com/watch?v=6m7cAQgxtJA&ab_channel=Tips%26Reviews',
-'https://www.youtube.com/watch?v=rIlHQ7iCZJs&ab_channel=Tips%26Reviews']
-
-['https://www.youtube.com/watch?v=9ywHBxX2KA0&ab_channel=Tips%26Reviews',
-'https://www.youtube.com/watch?v=kGkq58BWhFs&ab_channel=Tips%26Reviews',
-'https://www.youtube.com/watch?v=yTtJhXLTGMw&ab_channel=Tips%26Reviews',
-'https://www.youtube.com/watch?v=WXthUZGSRyM&ab_channel=Tips%26Reviews']
-
-['https://www.youtube.com/watch?v=obXGuYkAjNc&ab_channel=Dicas%26Reviews%C2%AE',
-'https://www.youtube.com/watch?v=WKnzzRNe9Jg&ab_channel=Dicas%26Reviews%C2%AE',
-'https://www.youtube.com/watch?v=khsZkciyghg&ab_channel=Dicas%26Reviews%C2%AE',]
-
-['https://www.youtube.com/watch?v=8TOFWnJEDkI&ab_channel=Tips%26Reviews',
-'https://www.youtube.com/watch?v=3_OVKnw60U0&ab_channel=Tips%26Reviews',
-'https://www.youtube.com/watch?v=pFumZOMmWas&ab_channel=Tips%26Reviews',
-'https://www.youtube.com/watch?v=245ONuV9KDw&ab_channel=Tips%26Reviews']'''
-
 with open('links.txt', 'r', encoding="utf8") as arquivo:
     url = [linha.strip() for linha in arquivo]
 
@@ -104,6 +83,7 @@ for view in range(views):
         if test == '0:00':
             yout_bot.play_video()
             print('Forced played!')
+        print('-'*40 + '->')
         print(f'Watching! {datetime.now():%d-%m-%y %H:%M:%S}')
         time_before = datetime.now()
 
@@ -117,5 +97,7 @@ for view in range(views):
                 print('Bug or ad too long, starting next video!')
                 break
 
-        print(f'View {views+1} completa!')
+        print(f'View {view+1} completa!')
+        print('-'*40 + '->')
+        print()
         yout_bot.close_browser()
