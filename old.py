@@ -77,8 +77,8 @@ class Bot:
         except Exception as error:
             print(f'{"-"*50}\nFail to close the browser!\n\n{error}\n{"-"*50}')
 
-with open('link.txt', 'r', encoding="utf8") as arquivo:
-    url = [linha.strip() for linha in arquivo]
+canais = ['https://www.youtube.com/channel/UCZTgQpHlnWvrSNpHBDCP3mg/videos',
+          'https://www.youtube.com/channel/UCSPueZnmf5kfA0vVrXBv4Xg/videos']
 
 views = 30
 for view in range(views):

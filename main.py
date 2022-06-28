@@ -5,13 +5,21 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.options import Options
 from datetime import datetime
 
+"""
+Criar separado o scrapper para pegar os videos
+Arrumar o bot para ler os videos separados.
+Arrumar o output
+"""
+
 
 class Bot():
-    def __init__(self, canais):
+    def __init__(self):
         options = Options()
         options.headless = False
         self.browser = webdriver.Firefox(options=options)
-        self.pages = canais
+        self.pages = ['https://www.youtube.com/channel/UCZTgQpHlnWvrSNpHBDCP3mg/videos',
+          'https://www.youtube.com/channel/UCSPueZnmf5kfA0vVrXBv4Xg/videos']
+        self.videos = []
 
     def open_url(self, url):
         try:
@@ -32,15 +40,14 @@ class Bot():
                 f'''{"-"*50}\nFalha ao pegar URLS!{error}\n{"-"*50}''')
 
     def get_videos(self):
-        url_list = []
         for page in self.pages:
             self.open_url(page)
             sleep(1)
             urls = self.get_video_urls() # ver se da para retornar direto essa list
             for link in urls:  # rever esta parte, acho que esta redundante.
-                url_list.append(link)
-        print(len(url_list))
-        return url_list
+                self.videos.append(link)
+        print(len(self.videos))
+        # retornar a lista com as urls
 
     def get_video_duration(self):
         try:
@@ -99,17 +106,18 @@ class Bot():
             print(f'{"-"*50}\nFail to close the browser!\n\n{error}\n{"-"*50}')
 
 # 24 e 18
-canais = ['https://www.youtube.com/channel/UCZTgQpHlnWvrSNpHBDCP3mg/videos',
-          'https://www.youtube.com/channel/UCSPueZnmf5kfA0vVrXBv4Xg/videos']
-bot = Bot(canais)
+#canais = ['https://www.youtube.com/channel/UCZTgQpHlnWvrSNpHBDCP3mg/videos',
+#          'https://www.youtube.com/channel/UCSPueZnmf5kfA0vVrXBv4Xg/videos']
+bot = Bot()
 urls = bot.get_videos()
 print(f"Foram encontrados {len(urls)} videos")
 views = 10
-'''
+
 for view in range(views):
     for video in urls:
         bot.open_url(video)
-        sleep(2)
+        print(video)
+        sleep(3)
         bot.get_video_name()
         total_dur = bot.get_video_duration()
         bot.speed_up()
@@ -134,4 +142,5 @@ for view in range(views):
         print(f'View {view+1} completa!')
         print('-'*40 + '->')
         print()
-        bot.close_browser()'''
+        sleep(1)
+        bot.close_browser()
