@@ -4,12 +4,13 @@ from time import sleep
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.options import Options
 from datetime import datetime
+import readChannels
 
 
-class Bot():
+class Bot:
     def __init__(self):
         options = Options()
-        options.headless = False
+        options.headless = True
         self.browser = webdriver.Firefox(options=options)
         
     
@@ -112,12 +113,19 @@ class Bot():
         except Exception as error:
             print(f'{"-"*50}\nFail to close the browser!\n\n{error}\n{"-"*50}')
 
-bot = Bot()
-links = bot.read_arq()
+
+reader = readChannels.channelReader()
+links = reader.get_videos()
+reader.writeTxt(links)
+
+
+load_links = Bot()  #aqui ta abrindo uma tela sozinho
+links = load_links.read_arq()
 for view in range(50):
     for video in links:
         bot = Bot()
         bot.open_url(video)
+        print('-'*100 + '->')
         print(video)
         sleep(3)
         bot.get_video_name()
@@ -128,7 +136,6 @@ for view in range(50):
         if test == '0:00':
             bot.play_video()
             print('Forced play!')
-        print('-'*40 + '->')
         print(f'Watching! {datetime.now():%d-%m-%y %H:%M:%S}')
         time_before = datetime.now()
         watched = 0
@@ -142,8 +149,7 @@ for view in range(50):
                 break
 
         print(f'View {view+1} completa!')
-        print('-'*40 + '->')
+        print('-'*100 + '->')
         print()
         sleep(1)
         bot.close_browser()
-
