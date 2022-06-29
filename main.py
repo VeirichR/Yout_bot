@@ -4,24 +4,34 @@ from time import sleep
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.options import Options
 from datetime import datetime
-
-"""
-Criar separado o scrapper para pegar os videos
-Arrumar o bot para ler os videos separados.
-Arrumar o output
-"""
+import readChannels
 
 
-class Bot():
+class Bot:
     def __init__(self):
         options = Options()
-        options.headless = False
+        options.headless = True
         self.browser = webdriver.Firefox(options=options)
-        self.pages = ['https://www.youtube.com/channel/UCZTgQpHlnWvrSNpHBDCP3mg/videos',
-          'https://www.youtube.com/channel/UCSPueZnmf5kfA0vVrXBv4Xg/videos']
-        self.videos = []
+        
+    
+    def read_arq(self):
+        '''
+        Le o arquivo com os links e os coloca em uma lista
+        return: list
+        '''
+        try:
+            with open('links.txt', 'r') as arquivo:
+                links = [linha.strip() for linha in arquivo.readlines()]
+            return links
+        except Exception as error:
+            print(
+                f'''{"-"*50}\nFalha na leitura do arquivo!
+                {error}\n{"-"*50}''')
 
     def open_url(self, url):
+        '''
+        Get na url passada.
+        '''
         try:
             self.browser.get(url)
         except Exception as error:
@@ -29,27 +39,23 @@ class Bot():
                 f'''{"-"*50}\nFalha ao entrar na URL passada!
                 {error}\n{"-"*50}''')
 
-    def get_video_urls(self):
+    def get_video_name(self):
+        '''
+        Pega o nome do video que esta sendo assistido
+        '''
         try:
-            videos = self.browser.find_elements(By.ID, 'thumbnail')
-            urls = [video.get_attribute('href') for video in videos]
-            urls.pop(0)
-            return urls
+            name = self.browser.find_element(
+                By.CSS_SELECTOR, '#container > h1 > yt-formatted-string')
+            print(name.text)
         except Exception as error:
             print(
-                f'''{"-"*50}\nFalha ao pegar URLS!{error}\n{"-"*50}''')
-
-    def get_videos(self):
-        for page in self.pages:
-            self.open_url(page)
-            sleep(1)
-            urls = self.get_video_urls() # ver se da para retornar direto essa list
-            for link in urls:  # rever esta parte, acho que esta redundante.
-                self.videos.append(link)
-        print(len(self.videos))
-        # retornar a lista com as urls
+                f'''{"-"*50}\nFail getting current video name!
+                {error}\n{"-"*50}''')
 
     def get_video_duration(self):
+        '''
+        Pega a duracao total do video que esta sendo assistido
+        '''
         try:
             duration = self.browser.find_element(
                 By.CLASS_NAME, 'ytp-time-duration')
@@ -59,16 +65,10 @@ class Bot():
                 f'''{"-"*50}\nFail getting video duration!
                 {error}\n{"-"*50}''')
 
-    def play_video(self):
-        try:
-            play_btn = self.browser.find_element(
-                By.CSS_SELECTOR, '.ytp-play-button')
-            play_btn.click()
-        except Exception as error:
-            print(
-                f'{"-"*50}\nFail to play! \n\n{error}\n{"-"*50}')
-
     def speed_up(self):
+        '''
+        Coloca a velocidade do video que esta sendo assitido em 2x
+        '''
         try:
             teste = self.browser.find_element(
                 By.CSS_SELECTOR, '.ytp-settings-button')
@@ -80,6 +80,9 @@ class Bot():
             print(f'{"-"*50}\nFail to speed up! \n\n{error}\n{"-"*50}')
 
     def get_time_watched(self):
+        '''
+        Pega o tempo de video que foi visto
+        '''
         try:
             time_watched = self.browser.find_element(
                 By.CLASS_NAME, 'ytp-time-current')
@@ -88,34 +91,41 @@ class Bot():
             print(
                 f'''{"-"*50}\nFail getting current video time!
                 {error}\n{"-"*50}''')
-
-    def get_video_name(self):
+    
+    def play_video(self):
+        '''
+        Clica no botao play
+        '''
         try:
-            name = self.browser.find_element(
-                By.CSS_SELECTOR, '#container > h1 > yt-formatted-string')
-            print(name.text)
+            play_btn = self.browser.find_element(
+                By.CSS_SELECTOR, '.ytp-play-button')
+            play_btn.click()
         except Exception as error:
             print(
-                f'''{"-"*50}\nFail getting current video name!
-                {error}\n{"-"*50}''')
+                f'{"-"*50}\nFail to play! \n\n{error}\n{"-"*50}')
 
     def close_browser(self):
+        '''
+        Fecha o browser
+        '''
         try:
             self.browser.close()
         except Exception as error:
             print(f'{"-"*50}\nFail to close the browser!\n\n{error}\n{"-"*50}')
 
-# 24 e 18
-#canais = ['https://www.youtube.com/channel/UCZTgQpHlnWvrSNpHBDCP3mg/videos',
-#          'https://www.youtube.com/channel/UCSPueZnmf5kfA0vVrXBv4Xg/videos']
-bot = Bot()
-urls = bot.get_videos()
-print(f"Foram encontrados {len(urls)} videos")
-views = 10
 
-for view in range(views):
-    for video in urls:
+reader = readChannels.channelReader()
+links = reader.get_videos()
+reader.writeTxt(links)
+
+
+load_links = Bot()  #aqui ta abrindo uma tela sozinho
+links = load_links.read_arq()
+for view in range(50):
+    for video in links:
+        bot = Bot()
         bot.open_url(video)
+        print('-'*100 + '->')
         print(video)
         sleep(3)
         bot.get_video_name()
@@ -126,7 +136,6 @@ for view in range(views):
         if test == '0:00':
             bot.play_video()
             print('Forced play!')
-        print('-'*40 + '->')
         print(f'Watching! {datetime.now():%d-%m-%y %H:%M:%S}')
         time_before = datetime.now()
         watched = 0
@@ -140,7 +149,7 @@ for view in range(views):
                 break
 
         print(f'View {view+1} completa!')
-        print('-'*40 + '->')
+        print('-'*100 + '->')
         print()
         sleep(1)
         bot.close_browser()
