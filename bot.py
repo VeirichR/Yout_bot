@@ -11,7 +11,8 @@ class Bot:
     def __init__(self):
         options = Options()
         options.headless = True
-        self.browser = webdriver.Firefox(options=options)
+        self.browser = webdriver.Firefox()
+
         
     
     def read_arq(self):
@@ -114,12 +115,12 @@ class Bot:
             print(f'{"-"*50}\nFail to close the browser!\n\n{error}\n{"-"*50}')
 
 
-reader = readChannels.channelReader()
-links = reader.get_videos()
-reader.writeTxt(links)
+#reader = readChannels.channelReader()
+#links = reader.get_videos()
+#reader.writeTxt(links)
 
 
-load_links = Bot()  #aqui ta abrindo uma tela sozinho
+load_links = Bot()
 links = load_links.read_arq()
 for view in range(50):
     for video in links:
